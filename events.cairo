@@ -45,7 +45,7 @@ pub mod EventCounter {
             self.emit(
                 Event.UserIncreaseCounter(
                     UserIncreaseCounter {
-                        user: get_caller_address, new_value: self.counter.read()
+                        user: get_caller_address(), new_value: self.counter.read()
                     }
                 )
             )
